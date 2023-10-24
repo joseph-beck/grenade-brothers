@@ -1,4 +1,5 @@
 using Render;
+using Entities;
 using SFML.Graphics;
 
 namespace Game
@@ -10,11 +11,14 @@ namespace Game
             Renderer renderer = new();
             RenderWindow window = renderer.Window;
 
+            Grenade grenade = new();
+
             while (window.IsOpen)
             {
-                window.DispatchEvents();
                 window.Clear(Color.Black);
+                window.Draw(grenade.Sprite);
                 window.Display();
+                window.DispatchEvents();
             }
         }
     }

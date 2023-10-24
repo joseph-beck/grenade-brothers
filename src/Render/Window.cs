@@ -14,7 +14,7 @@ namespace Render
         public Renderer()
         {
             VideoMode mode = new(WIDTH, HEIGHT);
-            Window = new RenderWindow(mode, TITLE);
+            Window = new RenderWindow(mode, TITLE, Styles.Default);
 
             Window.SetVerticalSyncEnabled(true);
 
