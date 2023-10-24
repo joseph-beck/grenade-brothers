@@ -1,5 +1,5 @@
-using System.Drawing;
 using SFML.System;
+using SFML.Window;
 
 namespace Entities
 {
@@ -21,6 +21,22 @@ namespace Entities
         public void Explode()
         {
             HasExploded = true;
+        }
+
+        public override void Update(KeyEventArgs? e)
+        {
+            if (e != null)
+            {
+                return;
+            }
+
+            if (Sprite == null)
+            {
+                return;
+            }
+
+            var position = Sprite.Position;
+            Sprite.Position = new Vector2f(position.X, position.Y + 1);
         }
     }
 }

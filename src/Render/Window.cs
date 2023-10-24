@@ -17,6 +17,7 @@ namespace Render
             Window = new RenderWindow(mode, TITLE, Styles.Default);
 
             Window.SetVerticalSyncEnabled(true);
+            Window.SetFramerateLimit(60);
 
             Window.Closed += (sender, args) => Window.Close();
         }
