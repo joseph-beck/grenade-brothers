@@ -1,0 +1,3 @@
+﻿using Game;
+
+Window.Run();
